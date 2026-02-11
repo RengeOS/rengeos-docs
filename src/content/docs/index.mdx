@@ -1,0 +1,38 @@
+---
+title: Homepage
+template: splash
+hero:
+  title: |
+    <p style="font-size:45px;white-space:nowrap;background:linear-gradient(90deg,#8B51FF,#C77DFF,#5AF0FF);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-rendering:optimizeLegibility;">Welcome to RengeOS!</p>
+  tagline: |
+    <p style="font-size: 15px;">The next-generation minimal operating system based on Arch Linux focuses on performance, stability, and maintainability.</p>
+  image:
+    file: ../../assets/RengeOS-logo.png
+  actions:
+    - text: Let’s get started!
+      link: /introduction/overview
+      icon: right-arrow
+    - text: Getting an ISO
+      link: /getting-started/getting-an-iso
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Features
+
+<CardGrid>
+	<Card title="Minimal yet powerful" icon="rocket">
+	An opinionated, minimal Arch-based system focused on performance, featuring a custom XanMod kernel and LZ4 compression.
+	</Card>
+	<Card title="Rollback any time you want" icon="star">
+		Bcachefs filesystem is supported by default, which is well-known for its CoW and Snapshots like Btrfs filesystem but more effective
+	</Card>
+	<Card title="Install once" icon="heart">
+		There's no need to reinstall system with Live ISO on USB if things get messed up with `ros-reborn` in `recovery mode` on GRUB
+	</Card>
+	<Card title="Your system, your rules" icon="setting">
+		You decide what packages gets installed and enabled so have fun with your minimal Arch-based system
+	</Card>
+</CardGrid>
