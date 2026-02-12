@@ -41,8 +41,8 @@ export default defineConfig({
 				{
 					label: 'Installation',
 					items: [
-						{ label: 'Automated Installation (Recommended)', slug: 'installation/automated-installation'},
-						{ label: 'Manual Installation (Not Recommended By Author)', slug: 'installation/manual-installation'},
+						{ label: 'Minimal ISO Installation', slug: 'installation/minimal-iso-installation'},
+						{ label: 'Niri WM ISO Installation', slug: 'installation/niriwm-iso-installation'},
 					],
 					collapsed: false,
 				},
@@ -51,8 +51,9 @@ export default defineConfig({
 					items: [
 						{ label: 'Change GRUB Theme', slug:'configuration/change-grub-theme'},
 						{ label: 'Enable Bcachefs Rollback', slug: 'configuration/enable-bcachefs-rollback'},
-						{ label: 'Restore RengeOS To Its Original State (Recovery Mode)', slug: 'configuration/restore-rengeos'},
-						{ label: 'Update airootfs and kernel for ros-reborn (Recovery Mode)', slug: 'configuration/update-ros-reborn'},
+						{ label: 'Enable Compatibility Rollback', slug: 'configuration/enable-compatibility-rollback'},
+						{ label: 'ROS-Reborn (Recovery Mode)', slug: 'configuration/ros-reborn'},
+						{ label: 'ROS-Reborn-System-OTA (Recovery Mode)', slug: 'configuration/ros-reborn-system-ota'},
 					],
 					collapsed: false,
 				},
@@ -64,8 +65,8 @@ export default defineConfig({
 				{
 					label: 'Reference',
 					items: [
+						{ label: 'Release Notes', slug: 'reference/release-notes'},
 						{ label: 'Credits', slug: 'reference/credits'},
-						{ label: 'About Me', slug: 'reference/about-me'},
 					],
 					collapsed: false,
 				},
