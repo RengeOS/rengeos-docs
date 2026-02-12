@@ -2,7 +2,6 @@ name: Deploy to GitHub Pages
 
 on:
   # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch’s name
   push:
     branches: [ main ]
   # Allows you to run this workflow manually from the Actions tab on GitHub.
@@ -20,6 +19,35 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v5
+      
+      - name: Remove old release notes
+        run: |
+          if [ -f "src/content/docs/reference/release-notes.mdx" ]; then
+            rm -f src/content/docs/reference/release-notes.mdx
+            echo "Old release notes removed"
+          else
+            echo "No existing release notes found"
+          fi
+      
+      - name: Clone Release Notes repository
+        run: |
+          git clone https://github.com/RengeOS/Release-Notes temp-release-notes
+          echo "Release Notes repository cloned"
+      
+      - name: Copy new release notes
+        run: |
+          if [ -f "temp-release-notes/release-notes.mdx" ]; then
+            mkdir -p src/content/docs/reference
+            cp temp-release-notes/release-notes.mdx src/content/docs/reference/release-notes.mdx
+            echo "New release notes copied successfully"
+          else
+            echo "Error: release-notes.mdx not found in Release-Notes repository"
+            exit 1
+          fi
+      
+      - name: Clean up temporary files
+        run: rm -rf temp-release-notes
+      
       - name: Install, build, and upload your site
         uses: withastro/action@v5
         # with:
