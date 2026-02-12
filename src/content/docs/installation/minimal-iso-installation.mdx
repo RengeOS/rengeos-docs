@@ -103,16 +103,57 @@ import { LinkCard } from '@astrojs/starlight/components';
 |--------------|--------------|
 
 
-- If you select **Yes**, after the installation is complete you will see it in the **GRUB** menu as shown below.
+- **If** you select **Yes**, after the installation is complete you will see it in the **GRUB** menu as shown below.
 
 ![last1](../../../assets/example-ros-installer/last1.png)
 
-- If you choose **No**, that's perfectly fine because recovery mode is essentially a second root partition on the device,
+- **If** you choose **No**, that's perfectly fine because recovery mode is essentially a second root partition on the device,
   created to help users repair the main root partition more easily without needing a Live ISO.
+
+- **Now** we can move on to the Kernel selection step.
+
+<LinkCard title="Kernel selection" href="#kernel-selection" />
 
 ### Manual partitioning
 
-- **Coming soon!**
+- **Now** let's consider the conditions below before using the cfdisk tool to partition the hard drive.
+
+![add2](../../../assets/example-ros-installer/add2.png)
+
+- **Next**, inside ``cfdisk``, we will create partitions.
+
+<Aside type="caution">
+  **You** can create as many partitions as you want, but you must ensure that there is a ``boot`` partition
+  and a ``root`` partition (a ``recovery mode`` partition is optional).
+</Aside>
+
++ **Here** I have created the following partitions: ``/dev/sda1``: **1GB**, ``/dev/sda2``: **7GB**, ``/dev/sda3``: **60.7GB**
++ **The partitions** will be **divided in order**: the ``boot`` partition, the ``recovery mode`` partition, and the ``root`` partition.
+
+![add4](../../../assets/example-ros-installer/add4.png)
+
++ **After** we have created the partitions and exited cfdisk, we will immediately move on to the partition definition step.
++ **We** will choose the ``boot`` partition; in this case, my ``boot`` partition is ``sda1``.
+
+![add3](../../../assets/example-ros-installer/add3.png)
+
++ **Next**, we will select the ``root`` partition; in this case, my ``root`` partition is ``sda3``.
+
+![add5](../../../assets/example-ros-installer/add5.png)
+
++ **Now** we will be asked if we want to define a ``recovery mode`` partition.
++ **If** we haven't created a recovery mode partition, we can select **No** to skip this step.
++ **If** we have already created a ``recovery mode`` partition, select **Yes** as in my case to define the ``recovery mode`` partition.
+
+![add6](../../../assets/example-ros-installer/add6.png)
+
++ **Next**, we will select the ``recovery mode`` partition; in this case, my ``recovery mode`` partition is ``sda2``.
+
+![add7](../../../assets/example-ros-installer/add7.png)
+
++ **Now** we can move on to the Kernel selection step.
+
+<LinkCard title="Kernel selection" href="#kernel-selection" />
 
 ## Kernel selection
 - **The next step** is to select the **kernel** that will be installed and used as the **default**.
