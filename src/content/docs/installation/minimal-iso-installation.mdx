@@ -61,6 +61,23 @@ ros-installer
 
 ## Disk partition
 
+- **Now** we will choose a method for partitioning the hard drive.
+
+![add1](../../../assets/example-ros-installer/add1.png)
+
+### Choose a partitioning method
+
+- Select ``Yes`` **if** you intend to dual-boot with different operating systems or create a separate partition for different needs.
+
+<LinkCard title="Manual partitioning" href="#manual-partitioning" />
+
+- Select ``No`` **if** you want automatic partitioning based on one hard drive (suitable for beginners and lazy people like me lol)
+
+import { LinkCard } from '@astrojs/starlight/components';
+
+<LinkCard title="Automatic partitioning" href="#autimatic-partitioning" />
+
+### Automatic partitioning
 <Aside type="note">
   **We** have the following design:
   + ``/boot`` is the boot partition for Linux (size can be selected).
@@ -92,6 +109,10 @@ ros-installer
 
 - If you choose **No**, that's perfectly fine because recovery mode is essentially a second root partition on the device,
   created to help users repair the main root partition more easily without needing a Live ISO.
+
+### Manual partitioning
+
+- **Coming soon!**
 
 ## Kernel selection
 - **The next step** is to select the **kernel** that will be installed and used as the **default**.

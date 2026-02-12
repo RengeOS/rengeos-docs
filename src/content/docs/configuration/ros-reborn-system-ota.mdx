@@ -2,4 +2,58 @@
 title: ROS-Reborn-System-OTA (Recovery Mode)
 ---
 
-## It will be finished soon, so please wait :D
+**Imagine** you're too lazy to download the latest **RengeOS ISO**, but your system is running **RengeOS** and ``Recovery Mode`` is **enabled**.
+Why not take advantage of the ``ros-reborn`` tool?
+<br />
+**Essentially**, this is a supplementary tool to the ``ros-reborn`` tool that allows updating airootfs and the kernel in ``Recovery Mode`` based
+on the latest **RengeOS** version available here: https://github.com/RengeOS/ROS-Reborn-System-OTA/releases/latest
+<br />
+**Thanks to this**, you will always save a lot of time installing the latest RengeOS and won't need a Live ISO or USB, which is also the purpose for which this tool was created:D
+
+## Let’s proceed
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note">
+**Note that** this process requires a **network connection**,
+  so make sure you are connected to the network via **LAN** or **wirelessly** using the ``nmtui`` command.  
+</Aside>
+
+- **First**, boot into ``Recovery Mode`` from the ``GRUB menu``, then log in as the **root user**.
+- **Then** enter the command ``ros-reborn-system-ota`` and you see this program.
+
+![1](../../../assets/example-ros-reborn-system-ota/1.png)
+
+## Download airootfs and kernels from latest RengeOS
+- **Next**, confirm if you want to continue and we will proceed with the process of
+  downloading airootfs and the kernel from the latest GitHub release for RengeOS.
+
+<Aside type="note">
+ **This process** will not change anything to airootfs and the current kernel in the ``/rengeos-reborn`` directory, so you will be safe.
+</Aside>
+
+|![2](../../../assets/example-ros-reborn-system-ota/2.png) |![3](../../../assets/example-ros-reborn-system-ota/3.png)|
+|----------------------------------------------------------|---------------------------------------------------------|
+
+## Update airootfs and the kernels from latest RengeOS
+- **After** the download is complete, we will choose between updating airootfs and kernels in the ``/rengeos-reborn`` directory
+  (where they are located so that ``ros-reborn`` tool can reinstall the system without using a Live ISO and USB).
+- **If** you select **Yes**, the process will proceed to delete airootfs and the old kernels, replacing them with the new ones.
+- **If** you select **No**, airootfs and kernels will remain unchanged and nothing will happen.
+
+<Aside type="note">
+ **The information** inside the image below is a bit messy, so please make sure you've checked
+ for the latest version here: https://github.com/RengeOS/ROS-Reborn-System-OTA/releases/latest
+</Aside>
+
+![5](../../../assets/example-ros-reborn-system-ota/5.png)
+
+## After the update process is complete
+- **If** you successfully update airootfs and the kernel, you will see this message
+  and **congratulations**, you have successfully updated airootfs and kernels for the ``ros-reborn`` tool, yay!
+- **Now** you can use the ros-reborn tool, and it can definitely reinstall the system based on airootfs and the kernels you've updated:D
+
+![6](../../../assets/example-ros-reborn-system-ota/6.png)
+
+import { LinkCard } from '@astrojs/starlight/components';
+
+<LinkCard title="ROS-Reborn (Recovery Mode)" href="/configuration/ros-reborn/" />
