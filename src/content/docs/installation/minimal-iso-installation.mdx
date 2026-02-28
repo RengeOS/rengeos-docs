@@ -159,14 +159,16 @@ import { LinkCard } from '@astrojs/starlight/components';
 
 - **The next step** is to select the **kernel** that will be installed and used as the **default**.
 
-+ ``linux-renge-bore`` is the latest kernel based on the **Xanmod Kernel** and **BORE Schedule**,
-  with **O3 optimization** and **other features** that make laptops/desktops/gaming significantly smoother,
++ ``linux-stratix-pulse`` is the latest kernel from https://www.kernel.org/ with **some patches** from **CachyOS**,
+  **TKG-family**, **BORE schedules**
+  and a **few more patches** also built with **O3 optimization** and **other features** that
+  make laptops/desktops/gaming significantly smoother,
   reducing lag and stutter during heavy background tasks. However, it is not optimized for long-term workloads or servers.
   
-+ ``linux-renge-lts`` is also the latest kernel (in terms of official Linux kernel versions for LTS) based on the **Xanmod Kernel**,
-  built with **O3 optimization**.
++ ``linux-stratix-pulse-lts`` is also the **latest kernel** (in terms of official Linux kernel versions for LTS) from https://www.kernel.org/ with
+  some patches from **CachyOS**, **TKG-Family** and a **few more patches** also built with **O3 optimization**.
   It excels in smoothness, low latency, and better laptops/desktop/gaming performance than the regular kernel,
-  but maintains **long-term** stability and is less optimized than ``linux-renge-bore``.
+  but maintains **long-term** stability and is less optimized than ``linux-stratix-pulse``.
 
 <Aside type="tip">
  **Choose** ``linux-renge-bore`` if you're unsure which one to choose, as it offers the most comprehensive support (**recommended** by the **author**).

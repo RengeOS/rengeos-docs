@@ -20,19 +20,31 @@ hero:
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
+## Quick Look
+
+| **Minimal Edition** | **NiriWM Edition** |
+|:---:|:---:|
+| ![Minimal Edition](../../assets/minimal-edition.png) | ![NiriWM Edition](../../assets/niriwm-edition.png) |
+
 ## Features
 
 <CardGrid>
 	<Card title="Minimal yet powerful" icon="rocket">
-	An opinionated, minimal Arch-based system focused on performance, featuring a custom XanMod kernel and LZ4 compression.
+	  RengeOS is a flexible, robust, and highly maintainable system that allows users the freedom to manage their system in the way they want
+	</Card>
+  <Card title="Optimized kernels" icon="linux">
+    Built with O3 optimization and performance patches from CachyOS, TKG-Family, and other sources for better performance and efficiency
+  </Card>
+  <Card title="Install once" icon="heart">
+		No need to reinstall your system from a Live ISO if something breaks — simply recover using ros-reborn in GRUB recovery mode
 	</Card>
 	<Card title="Rollback any time you want" icon="star">
-		Bcachefs filesystem is supported by default, which is well-known for its CoW and Snapshots like Btrfs filesystem but more effective
-	</Card>
-	<Card title="Install once" icon="heart">
-		There's no need to reinstall system with Live ISO on USB if things get messed up with `ros-reborn` in `recovery mode` on GRUB
+		Bcachefs is supported by default, offering efficient CoW and snapshot capabilities for safe and fast system rollback
 	</Card>
 	<Card title="Your system, your rules" icon="setting">
-		You decide what packages gets installed and enabled so have fun with your minimal Arch-based system
+		The minimal edition lets you freely choose services, packages, and system behavior — delivering true Arch freedom on a clean
 	</Card>
+  <Card title="Solutions" icon="open-book">
+    We provides powerful snapshot tools and clear documentation to help both advanced and average users manage their system confidently ❤️
+  </Card>
 </CardGrid>
