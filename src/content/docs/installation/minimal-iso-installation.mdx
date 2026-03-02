@@ -1,7 +1,7 @@
 ---
 title: Minimal ISO Installation
 ---
-**Essentially**, we'll use ros-installer to automate the installation process from a Live ISO to the machine using the ``unsquashfs`` method and some other related techniques during the process.
+**Essentially**, we'll use ``ros-installer`` to automate the installation process from a Live ISO to the machine using the ``unsquashfs`` method and some other related techniques during the process.
 
 import { Aside } from '@astrojs/starlight/components';
 
@@ -13,6 +13,10 @@ import { Aside } from '@astrojs/starlight/components';
 + The **Online Installation** process is not compatible with the original design of this distribution (**RengeOS**).
 + Maintaining **other packages** and **infrastructure** using online methods would be quite expensive for me :(
 </Aside>
+
++ **This** is what it will look like:
+
+![Minimal-Edition](../../../assets/minimal-edition.png)
 
 ## Boot into Live ISO
 - **First**, we need to plug in the bootable USB drive containing the ISO file.
@@ -32,7 +36,7 @@ import { Aside } from '@astrojs/starlight/components';
 </Aside>
 
 ## Start the installation process
-- **After** the systemd process is complete, you will see a screen like this (RengeOS is inherently a minimal distribution).
+- **After** the systemd process is complete, you will see a screen like this.
 
 ![after-systemd](../../../assets/example-ros-installer/2.png)
 
