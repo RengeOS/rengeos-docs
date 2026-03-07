@@ -40,14 +40,33 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
     Obtain an ISO here: <a href="https://sourceforge.net/projects/rengeos/files/RengeOS-ISO/Latest/NiriWM-Edition/" target="_blank" rel="noopener noreferrer">Download</a>
   </Card>
   <Card title="Github Release (Latest)" icon="cloud-download">
-    Obtain an ISO here: <a href="" target="_blank" rel="noopener noreferrer">Instruction (Coming Soon!)</a>
+    Obtain an ISO here: <a href="/rengeos-docs/getting-started/getting-an-iso/#download-from-github-and-combine-each-iso-part" target="_blank" rel="noopener noreferrer">Instruction</a>
   </Card>
 </CardGrid>
 
 ![NiriWM-Edtion](../../../assets/niriwm-edition.png)
 
 <br/>
-  
+
+### Download from Github and combine each ISO part
+
+<Aside type="note">
+ - **I** did this on **Linux**, but it should work on **other operating systems** as well because I used ``cat`` to merge the parts into a complete ISO.
+</Aside>
+
+- **First**, you need to know which files we need to download to combine them into a complete ISO.
+- **We** need to download the parts with the extension ``.iso.part001``, ``.iso.part002``, etc.
+
+![1](../../../assets/example-getting-an-iso/1.png)
+
+- **After** downloading, I've saved them in the ``~/Downloads/`` folder, and we'll combine them into a complete ISO.
+
+```sh
+# I need to move to the location where the downloaded parts are stored.
+cd ~/Downloads/
+# Now let's combine them.
+cat rengeos-niriwm-2026.03.06-x86_64.iso.part* > rengeos-niriwm-2026.03.06-x86_64.iso
+```
 ## Build it from source code (Arch-based)
 
 <Aside type="caution">
@@ -116,5 +135,8 @@ rengeos-2026.01.29-x86_64.iso: OK
 
 import { LinkCard } from '@astrojs/starlight/components';
 
+## After the ISO download process
+
+- **After** the ISO download process is complete, you'll probably want to create a bootable USB drive.
+
 <LinkCard title="Create Bootable USB" href="/rengeos-docs/getting-started/create-bootable-usb/" />
-<LinkCard title="Minimal ISO Installation" href="/rengeos-docs/installation/minimal-iso-installation/" />
