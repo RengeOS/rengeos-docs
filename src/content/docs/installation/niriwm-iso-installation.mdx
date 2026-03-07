@@ -19,6 +19,11 @@ import { Aside } from '@astrojs/starlight/components';
 ![NiriWM-Edition](../../../assets/niriwm-edition.png)
 
 ## Boot into Live ISO
+
+<Aside type="caution">
+  - **Make sure** you have disabled **Secure Boot** in your computer manufacturer's BIOS. **Otherwise**, it will **not boot**!
+</Aside>
+
 - **First**, we need to plug in the bootable USB drive containing the ISO file.
   Then, depending on your computer's hardware manufacturer,
   access the boot menu and boot from that USB drive.
@@ -58,3 +63,9 @@ ros-installer
 import { LinkCard } from '@astrojs/starlight/components';
 
 <LinkCard title="Installation instructions" href="/rengeos-docs/installation/minimal-iso-installation/#choose-a-hard-drive-to-install-on" />
+
+## After the installation process is complete
+
+- **After** we have completed the installation process, please read the user guide here:
+
+<LinkCard title="NiriWM Edition Configuration" href="/rengeos-docs/configuration/niriwm-edition" />

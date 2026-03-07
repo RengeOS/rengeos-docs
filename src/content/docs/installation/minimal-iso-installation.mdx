@@ -19,6 +19,12 @@ import { Aside } from '@astrojs/starlight/components';
 ![Minimal-Edition](../../../assets/minimal-edition.png)
 
 ## Boot into Live ISO
+
+<Aside type="caution">
+  - **Make sure** you have disabled **Secure Boot** in your computer manufacturer's BIOS. **Otherwise**, it will **not boot**!
+</Aside>
+
+
 - **First**, we need to plug in the bootable USB drive containing the ISO file.
   Then, depending on your computer's hardware manufacturer,
   access the boot menu and boot from that USB drive.
@@ -187,11 +193,11 @@ import { LinkCard } from '@astrojs/starlight/components';
 ## Filesystem
 
 <Aside type="note">
-  **Currently**, RengeOS only supports bcachefs and xfs, but in the future it will probably support more :) for example, btrfs, f2fs, etc.
+  **Currently**, **RengeOS** only supports ``bcachefs`` and ``xfs``, but in the future it will probably support more :) for example: ``btrfs``, ``f2fs``, ``ext4``, etc.
 </Aside>
 
-- **After** selecting your desired kernel, you will see something like this (for the ``linux-renge-bore`` option).
-- **If** we selected ``linux-renge-lts``, only the **xfs filesystem** option will be **displayed** because it doesn't support **bcachefs filesystem**.
+- **After** selecting your desired kernel, you will see something like this (for the ``linux-stratix-pulse`` option).
+- **If** we selected ``linux-stratix-pulse-lts``, only the **xfs filesystem** option will be **displayed** because it doesn't support **bcachefs filesystem**.
 - **Anyway**, that's your decision, but I still recommend choosing **bcachefs filesystem** if possible because RengeOS currently has strong support for it.
 
 ![14](../../../assets/example-ros-installer/14.png)
