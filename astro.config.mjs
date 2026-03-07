@@ -42,13 +42,14 @@ export default defineConfig({
 					label: 'Installation',
 					items: [
 						{ label: 'Minimal ISO Installation', slug: 'installation/minimal-iso-installation'},
-						{ label: 'Niri WM ISO Installation', slug: 'installation/niriwm-iso-installation'},
+						{ label: 'NiriWM ISO Installation', slug: 'installation/niriwm-iso-installation'},
 					],
 					collapsed: false,
 				},
 				{
 					label: 'Configuration',
 					items: [
+						{ label: 'NiriWM Edition', slug: 'configuration/niriwm-edition'},
 						{ label: 'Change GRUB Theme', slug:'configuration/change-grub-theme'},
 						{ label: 'Enable Bcachefs Rollback', slug: 'configuration/enable-bcachefs-rollback'},
 						{ label: 'Enable Compatibility Rollback', slug: 'configuration/enable-compatibility-rollback'},
@@ -56,11 +57,6 @@ export default defineConfig({
 						{ label: 'ROS-Reborn-System-OTA (Recovery Mode)', slug: 'configuration/ros-reborn-system-ota'},
 					],
 					collapsed: false,
-				},
-				{
-					label: 'Architecture',
-					items: [],
-					collapsed: true,
 				},
 				{
 					label: 'Reference',
