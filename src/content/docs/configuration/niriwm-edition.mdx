@@ -23,6 +23,7 @@ title: NiriWM Edition
 - **Lockscreen**: Hyprlock
 - **Power-Profiles-Manager**: Tuned, Tuned-ppd
 - **Audio**: Pipewire
+- **Login Manager**: Ly
 
 + **All** Niri configurations are saved here: ``~/.config/niri/``
 
@@ -40,6 +41,16 @@ sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 ```
 - **Now** you will see a **bluetooth icon** on the bar then tap it and connect, or you can connect through the ``blueman`` app.
+
+### Turn off default login manager (``ly``)
+
+- **We** will turn it off as follows:
+
+```sh
+# Turn off ly service
+sudo systemctl disable ly@tty2.service
+```
+- **Then** we will restart the machine to apply the changes and you can enable the login manager you want.
 
 ### Keybinds
 
