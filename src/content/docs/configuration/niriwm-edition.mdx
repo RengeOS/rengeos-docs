@@ -27,6 +27,53 @@ title: NiriWM Edition
 
 + **All** Niri configurations are saved here: ``~/.config/niri/``
 
+### Errors handling
+
+- **Below** are some errors I've encountered during use and how to fix them (temporarily until I find a solution):
+
+#### No wallpaper appears the first time after installation
+
+- **After** the installation process, restarting, and logging into Niri, if the default wallpaper doesn't load, we will resolve it as follows:
+
++ **Press** ``Mod+Alt+W`` to open the wallpaper selection tool then select the wallpaper located in the ``~/Pictures/Wallpapers/`` folder and wait to see if the wallpaper loads.
+
++ **If nothing happens**, we'll restart the computer because it's highly likely that the process killed or crashed and perhaps it will work again.
+
+```sh
+reboot
+```
+
+#### The audio percentage indicator is not displayed on the waybar or is broken
+
++ First, make sure you have updated all your packages. If not, do the following:
+
+```sh
+sudo pacman -Syu
+```
+**Then** restart your computer to apply the changes.
+
+```sh
+reboot
+```
+
++ **After restarting**, the audio indicator should definitely work normally again.
+
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="note">
+
++ **Please note that** occasionally the audio indicator may not appear on the waybar. **We** can fix this by:
+
+```sh
+pkill waybar && waybar & disown
+```
+
+</Aside>
+
+### The ``pywalfox`` extension for Firefox
+
++ If you want your Firefox interface to match the colors of the Waybar or Kitty, here's what we'll do:
+
 ### Turn on bluetooth
 
 - **First**, we need to download the following packages:
