@@ -43,9 +43,9 @@ title: NiriWM Edition
 reboot
 ```
 
-#### The audio percentage indicator is not displayed on the waybar or is broken
+#### The audio percentage indicator is not displayed on the Waybar or is broken
 
-+ First, make sure you have updated all your packages. If not, do the following:
++ **First**, make sure you have updated all your packages. If not, do the following:
 
 ```sh
 sudo pacman -Syu
@@ -62,7 +62,7 @@ import { Aside } from '@astrojs/starlight/components';
 
 <Aside type="note">
 
-+ **Please note that** occasionally the audio indicator may not appear on the waybar. **We** can fix this by:
++ **Please note that** occasionally the audio indicator may not appear on the Waybar. **We** can fix this by:
 
 ```sh
 pkill waybar && waybar & disown
@@ -70,9 +70,29 @@ pkill waybar && waybar & disown
 
 </Aside>
 
-### The ``pywalfox`` extension for Firefox
+#### Cannot rename files and folders in file manager (``Nautilus``)
 
-+ If you want your Firefox interface to match the colors of the Waybar or Kitty, here's what we'll do:
++ **I** don't understand why all other ``Nautilus`` functions work fine except for the renaming feature.
+
++ **Therefore**, we will use the renaming method as follows:
+
+```sh
+mv ./old-file-or-folder-name ./new-file-or-folder-name
+```
+
+### The ``pywalfox`` extension for firefox
+
++ **If** you want your Firefox interface to match the colors of the ``Waybar`` or ``Kitty``, here's what we'll do:
+
+![1](../../../assets/example-niriwm-edition-configuration/1.png)
+
++ **First**, download the pywalfox extension for Firefox here: [pywalfox](https://addons.mozilla.org/en-US/firefox/addon/pywalfox/)
+
+![2](../../../assets/example-niriwm-edition-configuration/2.png)
+
++ **Next**, click on the PyWalfox icon located in the extensions section, **then** click the "Fetch Pywal colors" button to get the color and that's how we synchronize the colors.
+
+![3](../../../assets/example-niriwm-edition-configuration/3.png)
 
 ### Turn on bluetooth
 
@@ -99,7 +119,7 @@ sudo systemctl disable ly@tty2.service
 ```
 - **Then** we will restart the machine to apply the changes and you can enable the login manager you want.
 
-### Keybinds
+## Keybinds
 
 #### Audio
 
